@@ -1,0 +1,3 @@
+/* C:/GPRS_C_SDK/build/app/libs/gps/lib/libgps_debug.a */
+INPUT(C:/GPRS_C_SDK/build/app/libs/gps/minmea/lib/libminmea_debug.a)
+INPUT(C:/GPRS_C_SDK/build/app/libs/gps/lib/libgps_debug.al)

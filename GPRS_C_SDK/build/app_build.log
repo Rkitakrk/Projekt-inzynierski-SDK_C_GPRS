@@ -1,0 +1,35 @@
+Build host is WINDOWS
+
+MAKE              init
+
+MAKE              libs
+
+MAKE              libs/gps
+
+MAKE              libs/gps/minmea
+
+PREPARING         libgps_debug.a
+
+MAKE              libs/utils
+
+PREPARING         liblibs_debug.a
+
+MAKE              app
+
+
+LDGEN  by csdk    cust.ld
+LD                app.elf
+ElfCombine        Elf binary & map file
+
+GEN               stripped (rm syms) elf file app.elf
+mips-elf-ld.exe: hex/app/app.elf: access beyond end of merged section (-99877280)
+
+CP  		  AUDIO CFP FILE......
+AUDIO CFG         No audio cfp file
+SREC              app.srec for flash/romulator
+
+LODTOBIN  C:/GPRS_C_SDK/hex/app/app_flash.lod
+LODTOBIN          Sucessful
+LODCOMBINE        Combine user lod with Platform lod
+LODCOMBINE        Combine sucessful
+

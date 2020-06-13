@@ -1,0 +1,257 @@
+Archive member included because of file (symbol)
+
+C:/GPRS_C_SDK/build/app/init/lib\libinit_debug.a(sdk_init.o)
+                              (user_Main)
+C:/GPRS_C_SDK/build/app/app/lib\libapp_debug.a(app_main.o)
+                              C:/GPRS_C_SDK/build/app/init/lib\libinit_debug.a(sdk_init.o) (app_Main)
+
+Allocating common symbols
+Common symbol       size              file
+
+temp000___          0x4               C:/GPRS_C_SDK/build/app/init/lib\libinit_debug.a(sdk_init.o)
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 C:/GPRS_C_SDK/build/app/init/lib\libinit_debug.a(sdk_init.o)
+ .data          0x0000000000000000        0x0 C:/GPRS_C_SDK/build/app/init/lib\libinit_debug.a(sdk_init.o)
+ .bss           0x0000000000000000        0x0 C:/GPRS_C_SDK/build/app/init/lib\libinit_debug.a(sdk_init.o)
+ .pdr           0x0000000000000000       0x40 C:/GPRS_C_SDK/build/app/init/lib\libinit_debug.a(sdk_init.o)
+ .text          0x0000000000000000        0x0 C:/GPRS_C_SDK/build/app/app/lib\libapp_debug.a(app_main.o)
+ .data          0x0000000000000000        0x0 C:/GPRS_C_SDK/build/app/app/lib\libapp_debug.a(app_main.o)
+ .bss           0x0000000000000000        0x0 C:/GPRS_C_SDK/build/app/app/lib\libapp_debug.a(app_main.o)
+ .reginfo       0x0000000000000000       0x18 C:/GPRS_C_SDK/build/app/app/lib\libapp_debug.a(app_main.o)
+ .pdr           0x0000000000000000       0x80 C:/GPRS_C_SDK/build/app/app/lib\libapp_debug.a(app_main.o)
+ .text.EventDispatch
+                0x0000000000000000        0x4 C:/GPRS_C_SDK/build/app/app/lib\libapp_debug.a(app_main.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD C:/GPRS_C_SDK/platform/chip/rom/8955/lib/mem_bridge_rom_CHIP.elf
+                0xffffffff88240000                . = 0xffffffff88240000
+                0xffffffff88240000                __rom_start = .
+
+.section_init   0xffffffff88240000       0x10
+ *(.section_init)
+ .section_init  0xffffffff88240000        0x8 C:/GPRS_C_SDK/build/app/init/lib\libinit_debug.a(sdk_init.o)
+                0xffffffff88240010                . = ALIGN (0x10)
+ *fill*         0xffffffff88240008        0x8 00
+
+.cust_rotext    0xffffffff88240010      0x190
+ *(.text)
+ *(.text.*)
+ .text.user_Main
+                0xffffffff88240010       0x1c C:/GPRS_C_SDK/build/app/init/lib\libinit_debug.a(sdk_init.o)
+                0xffffffff88240011                user_Main
+ .text.user_Init
+                0xffffffff8824002c       0x48 C:/GPRS_C_SDK/build/app/init/lib\libinit_debug.a(sdk_init.o)
+                0xffffffff8824002d                user_Init
+ .text.LoopTask
+                0xffffffff88240074       0x3c C:/GPRS_C_SDK/build/app/app/lib\libapp_debug.a(app_main.o)
+                0xffffffff88240075                LoopTask
+ .text.AppMainTask
+                0xffffffff882400b0       0x8c C:/GPRS_C_SDK/build/app/app/lib\libapp_debug.a(app_main.o)
+                0xffffffff882400b1                AppMainTask
+ .text.app_Main
+                0xffffffff8824013c       0x48 C:/GPRS_C_SDK/build/app/app/lib\libapp_debug.a(app_main.o)
+                0xffffffff8824013d                app_Main
+ *(.stub .gnu.linkonce.t.*)
+                0xffffffff882401a0                . = ALIGN (0x20)
+ *fill*         0xffffffff88240184       0x1c 00
+
+.cust_rodata    0xffffffff882401a0       0x20
+ *(.rdata)
+ *(.rodata)
+ *(.rodata.*)
+ .rodata.str1.4
+                0xffffffff882401a0       0x20 C:/GPRS_C_SDK/build/app/app/lib\libapp_debug.a(app_main.o)
+ *(.rodata.*_png)
+ *(.gnu.linkonce.r.*)
+ *(.rodata1)
+ *(.roresdata)
+ *(.robsdata)
+                0xffffffff882401c0                . = ALIGN (0x20)
+                0xffffffff882401c0                __user_rw_lma = .
+                0x00000000000001c0                __rom_size = (__user_rw_lma - __rom_start)
+                0xffffffff82300000                . = 0xffffffff82300000
+
+.cust_data      0xffffffff82300000        0x0 load address 0xffffffff882401c0
+                0xffffffff82300000                __user_rw_start = .
+ *(.data)
+ *(.data.*)
+ *(.gnu.linkonce.d.*)
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+                0xffffffff82300000                . = ALIGN (0x10)
+                0xffffffff82300000                __user_rw_end = .
+                0x0000000000000000                __user_rw_size = (__user_rw_end - __user_rw_start)
+                0xffffffff82300000                __user_bss_start = .
+
+.cust_bss       0xffffffff82300000       0x10
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+ *(.scommon)
+ .scommon       0xffffffff82300000        0x4 C:/GPRS_C_SDK/build/app/init/lib\libinit_debug.a(sdk_init.o)
+                0xffffffff82300000                temp000___
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss.g_InterfaceVtbl
+                0xffffffff82300004        0x4 C:/GPRS_C_SDK/build/app/init/lib\libinit_debug.a(sdk_init.o)
+                0xffffffff82300004                g_InterfaceVtbl
+ .bss.mainTaskHandle
+                0xffffffff82300008        0x4 C:/GPRS_C_SDK/build/app/app/lib\libapp_debug.a(app_main.o)
+                0xffffffff82300008                mainTaskHandle
+ .bss.otherTaskHandle
+                0xffffffff8230000c        0x4 C:/GPRS_C_SDK/build/app/app/lib\libapp_debug.a(app_main.o)
+                0xffffffff8230000c                otherTaskHandle
+ *(COMMON)
+ *(.rambss)
+                0xffffffff82300010                . = ALIGN (0x10)
+                0xffffffff82300010                __user_bss_end = .
+                0x0000000000000010                __user_bss_size = (__user_bss_end - __user_bss_start)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.reginfo        0x0000000000000000       0x18
+ .reginfo       0x0000000000000000       0x18 C:/GPRS_C_SDK/build/app/init/lib\libinit_debug.a(sdk_init.o)
+
+.mdebug.abi32   0x0000000000000000        0x0
+ .mdebug.abi32  0x0000000000000000        0x0 C:/GPRS_C_SDK/build/app/init/lib\libinit_debug.a(sdk_init.o)
+ .mdebug.abi32  0x0000000000000000        0x0 C:/GPRS_C_SDK/build/app/app/lib\libapp_debug.a(app_main.o)
+
+.gnu.attributes
+                0x0000000000000000       0x10
+ .gnu.attributes
+                0x0000000000000000       0x10 C:/GPRS_C_SDK/build/app/init/lib\libinit_debug.a(sdk_init.o)
+ .gnu.attributes
+                0x0000000000000010       0x10 C:/GPRS_C_SDK/build/app/app/lib\libapp_debug.a(app_main.o)
+
+.comment        0x0000000000000000       0x25
+ *(.comment)
+ .comment       0x0000000000000000       0x25 C:/GPRS_C_SDK/build/app/init/lib\libinit_debug.a(sdk_init.o)
+                                         0x26 (size before relaxing)
+ .comment       0x0000000000000000       0x26 C:/GPRS_C_SDK/build/app/app/lib\libapp_debug.a(app_main.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000       0x60
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x28 C:/GPRS_C_SDK/build/app/init/lib\libinit_debug.a(sdk_init.o)
+ .debug_aranges
+                0x0000000000000028       0x38 C:/GPRS_C_SDK/build/app/app/lib\libapp_debug.a(app_main.o)
+
+.debug_pubnames
+                0x0000000000000000       0xc6
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x0000000000000000       0x51 C:/GPRS_C_SDK/build/app/init/lib\libinit_debug.a(sdk_init.o)
+ .debug_pubnames
+                0x0000000000000051       0x75 C:/GPRS_C_SDK/build/app/app/lib\libapp_debug.a(app_main.o)
+
+.debug_info     0x0000000000000000     0x8af2
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000     0x44d6 C:/GPRS_C_SDK/build/app/init/lib\libinit_debug.a(sdk_init.o)
+ .debug_info    0x00000000000044d6     0x461c C:/GPRS_C_SDK/build/app/app/lib\libapp_debug.a(app_main.o)
+
+.debug_abbrev   0x0000000000000000      0x41f
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000      0x200 C:/GPRS_C_SDK/build/app/init/lib\libinit_debug.a(sdk_init.o)
+ .debug_abbrev  0x0000000000000200      0x21f C:/GPRS_C_SDK/build/app/app/lib\libapp_debug.a(app_main.o)
+
+.debug_line     0x0000000000000000      0x4d4
+ *(.debug_line)
+ .debug_line    0x0000000000000000      0x24a C:/GPRS_C_SDK/build/app/init/lib\libinit_debug.a(sdk_init.o)
+ .debug_line    0x000000000000024a      0x28a C:/GPRS_C_SDK/build/app/app/lib\libapp_debug.a(app_main.o)
+
+.debug_frame    0x0000000000000000       0xbc
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000       0x44 C:/GPRS_C_SDK/build/app/init/lib\libinit_debug.a(sdk_init.o)
+ .debug_frame   0x0000000000000044       0x78 C:/GPRS_C_SDK/build/app/app/lib\libapp_debug.a(app_main.o)
+
+.debug_str      0x0000000000000000     0x3cc0
+ *(.debug_str)
+ .debug_str     0x0000000000000000     0x3718 C:/GPRS_C_SDK/build/app/init/lib\libinit_debug.a(sdk_init.o)
+                                       0x38f0 (size before relaxing)
+ .debug_str     0x0000000000003718      0x5a8 C:/GPRS_C_SDK/build/app/app/lib\libapp_debug.a(app_main.o)
+                                       0x3dd9 (size before relaxing)
+
+.debug_loc      0x0000000000000000       0xdf
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000       0x5c C:/GPRS_C_SDK/build/app/init/lib\libinit_debug.a(sdk_init.o)
+ .debug_loc     0x000000000000005c       0x83 C:/GPRS_C_SDK/build/app/app/lib\libapp_debug.a(app_main.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.gptab.sdata
+ *(.gptab.data)
+ *(.gptab.sdata)
+
+.gptab.sbss
+ *(.gptab.bss)
+ *(.gptab.sbss)
+
+/DISCARD/
+ *(.rel.dyn)
+ *(.note.GNU-stack)
+ *(.eh_frame)
+START GROUP
+LOAD C:/GPRS_C_SDK/build/app/init/lib\libinit_debug.a
+LOAD C:/GPRS_C_SDK/build/app/libs/lib\liblibs_debug.a
+LOAD C:/GPRS_C_SDK/build/app/libs/gps/minmea/lib/libminmea_debug.a
+LOAD C:/GPRS_C_SDK/build/app/libs/gps/lib/libgps_debug.al
+LOAD C:/GPRS_C_SDK/build/app/libs/utils/lib/libutils_debug.a
+LOAD C:/GPRS_C_SDK/build/app/libs/gps/minmea/lib/libminmea_debug.a
+LOAD C:/GPRS_C_SDK/build/app/libs/gps/lib/libgps_debug.al
+LOAD C:/GPRS_C_SDK/build/app/libs/utils/lib/libutils_debug.a
+LOAD C:/GPRS_C_SDK/build/app/app/lib\libapp_debug.a
+END GROUP
+LOAD C:/GPRS_C_SDK/platform/lib/gcc/mips-elf/4.4.2\libgcc.a
+OUTPUT(C:/GPRS_C_SDK/build/app//app.elf elf32-littlemips)
+
+.debug_ranges   0x0000000000000000       0x50
+ .debug_ranges  0x0000000000000000       0x20 C:/GPRS_C_SDK/build/app/init/lib\libinit_debug.a(sdk_init.o)
+ .debug_ranges  0x0000000000000020       0x30 C:/GPRS_C_SDK/build/app/app/lib\libapp_debug.a(app_main.o)
